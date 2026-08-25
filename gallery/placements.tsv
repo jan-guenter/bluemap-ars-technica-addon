@@ -1,2 +1,15 @@
 case_id	label	x	y	z	block_state	expected
-stock-control	stone stock rendering control	176	100	175	minecraft:stone	stock-visible
+source-motor-north	source motor static shaft facing north	174	100	174	ars_technica:source_motor[facing=north]	stock-body-plus-static-shaft
+source-motor-south	source motor static shaft facing south	175	100	174	ars_technica:source_motor[facing=south]	stock-body-plus-static-shaft
+source-motor-west	source motor static shaft facing west	176	100	174	ars_technica:source_motor[facing=west]	stock-body-plus-static-shaft
+source-motor-east	source motor static shaft facing east	177	100	174	ars_technica:source_motor[facing=east]	stock-body-plus-static-shaft
+source-motor-up	source motor static shaft facing up	178	100	174	ars_technica:source_motor[facing=up]	stock-body-plus-static-shaft
+source-motor-down	source motor static shaft facing down	179	100	174	ars_technica:source_motor[facing=down]	stock-body-plus-static-shaft
+precise-relay-dry	precise relay static base pose	180	100	174	ars_technica:precise_relay[waterlogged=false]	installed-geo-static
+transmutation-turret-north	transmutation turret idle facing north	174	100	176	ars_technica:transmutation_turret[facing=north,triggered=false,waterlogged=false]	installed-geo-static-idle
+transmutation-turret-south	transmutation turret idle facing south	175	100	176	ars_technica:transmutation_turret[facing=south,triggered=false,waterlogged=false]	installed-geo-static-idle
+transmutation-turret-west	transmutation turret idle facing west	176	100	176	ars_technica:transmutation_turret[facing=west,triggered=false,waterlogged=false]	installed-geo-static-idle
+transmutation-turret-east	transmutation turret idle facing east	177	100	176	ars_technica:transmutation_turret[facing=east,triggered=false,waterlogged=false]	installed-geo-static-idle
+transmutation-turret-up	transmutation turret idle facing up	178	100	176	ars_technica:transmutation_turret[facing=up,triggered=false,waterlogged=false]	installed-geo-static-idle
+transmutation-turret-down	transmutation turret idle facing down	179	100	176	ars_technica:transmutation_turret[facing=down,triggered=false,waterlogged=false]	installed-geo-static-idle
+stock-control	stone stock rendering control	180	100	176	minecraft:stone	stock-visible

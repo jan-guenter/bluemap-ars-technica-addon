@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-"""Lint the generated placeholder gallery without starting Minecraft."""
+"""Lint the generated Ars Technica gallery without starting Minecraft."""
 
 from __future__ import annotations
 
@@ -31,36 +31,51 @@ def main() -> int:
     )
     if load_tag != {"values": [f"{cases.NAMESPACE}:load"]}:
         raise ValueError("load tag differs from the exact namespace")
-    if len(cases.PLACEMENTS) != 1:
-        raise ValueError("placeholder must contain exactly one stock control")
-
-    placement = cases.PLACEMENTS[0]
-    if placement.block_state != "minecraft:stone" or placement.expected != (
-        "stock-visible"
-    ):
-        raise ValueError("placeholder must remain an honest stone stock control")
+    if len(cases.PLACEMENTS) != 14:
+        raise ValueError("gallery must contain exactly 14 visual cases")
+    if sum(cases.LEGAL_STATE_COUNTS.values()) != 32:
+        raise ValueError("route coverage must remain exactly 32 legal states")
+    if cases.LEGAL_STATE_COUNTS != {
+        "source_motor": 6,
+        "precise_relay": 2,
+        "transmutation_turret": 24,
+    }:
+        raise ValueError("legal-state family coverage changed")
+    block_states = [placement.block_state for placement in cases.PLACEMENTS]
+    if sum(state.startswith("ars_technica:source_motor[") for state in block_states) != 6:
+        raise ValueError("gallery must cover six source motor facings")
+    if sum(state.startswith("ars_technica:precise_relay[") for state in block_states) != 1:
+        raise ValueError("gallery must contain one precise relay visual case")
+    if sum(
+        state.startswith("ars_technica:transmutation_turret[")
+        for state in block_states
+    ) != 6:
+        raise ValueError("gallery must cover six transmutation turret facings")
+    if block_states.count("minecraft:stone") != 1:
+        raise ValueError("gallery must contain one stone stock control")
     minimum_x, minimum_y, minimum_z, maximum_x, maximum_y, maximum_z = (
         cases.ENVELOPE
     )
-    if not (
-        minimum_x <= placement.x <= maximum_x
-        and minimum_y <= placement.y <= maximum_y
-        and minimum_z <= placement.z <= maximum_z
-    ):
-        raise ValueError("placeholder placement escaped its bounded envelope")
+    for placement in cases.PLACEMENTS:
+        if not (
+            minimum_x <= placement.x <= maximum_x
+            and minimum_y <= placement.y <= maximum_y
+            and minimum_z <= placement.z <= maximum_z
+        ):
+            raise ValueError("gallery placement escaped its bounded envelope")
 
     function_root = ROOT / f"datapack/data/{cases.NAMESPACE}/function"
     functions = "\n".join(
         path.read_text(encoding="utf-8")
         for path in sorted(function_root.glob("*.mcfunction"))
     )
-    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != 1:
-        raise ValueError("placeholder must place exactly one block")
+    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != 14:
+        raise ValueError("gallery must place exactly 14 blocks")
     lowered = functions.lower()
     for forbidden in ("summon ", "data merge", "op ", "deop ", "stop "):
         if forbidden in lowered:
-            raise ValueError(f"forbidden placeholder command: {forbidden}")
-    print("placeholder gallery lint passed: one bounded stock control")
+            raise ValueError(f"forbidden gallery command: {forbidden}")
+    print("gallery lint passed: 14 cases and 32 legal routed states")
     return 0
 
 
