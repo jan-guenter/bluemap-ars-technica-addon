@@ -3,11 +3,11 @@
 A Java 21 BlueMap add-on for the exact `ars-technica-2.7.6-mc1.21.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: staging candidate. The exact artifact gate admits only Ars Technica
-2.7.6, Ars Nouveau 5.13.0, and Create 6.0.10. It preserves the source motor's
-stock body while adding its static shaft, and replaces the empty animated
-placeholders for the precise relay and transmutation turret with static meshes
-compiled from the operator-installed GEO resources.
+Status: released as `v0.1.0-alpha.1`. The exact artifact gate admits only Ars
+Technica 2.7.6, Ars Nouveau 5.13.0, and Create 6.0.10. It preserves the source
+motor's stock body while adding its static shaft, and replaces the empty
+animated placeholders for the precise relay and transmutation turret with
+static meshes compiled from the operator-installed GEO resources.
 
 ## Build
 
