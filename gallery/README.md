@@ -1,11 +1,11 @@
-# Placeholder gallery
+# Ars Technica visual gallery
 
-This generated gallery proves only the deterministic data-pack mechanics and a
-single `minecraft:stone` stock control at `(176, 100, 175)`. It does not claim
-Ars Technica support.
+This generated 14-case gallery presents all six facings of the source motor and
+transmutation turret, one precise relay, and one `minecraft:stone` stock
+control. The renderer strictly admits 32 legal block states: 6 motor, 2 relay,
+and 24 turret states.
 
-Replace `cases.py` with the smallest real defect fixture and stock controls,
-then keep the stable commands:
+Use the stable commands:
 
 ```bash
 python gallery/generate.py
@@ -14,6 +14,5 @@ python gallery/lint.py
 bash gallery/package.sh /tmp/ars_technica-gallery.zip
 ```
 
-The release gate rejects the `SCAFFOLD_NOT_IMPLEMENTED` marker in `cases.py`.
 Keep gallery generation deterministic, bounded, synthetic where practical, and
 free of candidate assets or captured meshes.

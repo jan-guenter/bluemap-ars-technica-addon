@@ -1,10 +1,89 @@
 {
-  "accepted_staging_entries": null,
-  "final_release_artifacts": null,
-  "note": "Populate only after owner visual acceptance; this file is not packaged.",
-  "owner_accepted_staging": null,
-  "repository": "https://github.com/jan-guenter/bluemap-ars-technica-addon",
   "schema_version": 1,
-  "status": "prototype-not-owner-accepted",
-  "version": "0.1.0-SNAPSHOT"
+  "status": "owner-accepted-release-candidate",
+  "version": "0.1.0-alpha.1",
+  "release_date": "2026-08-25",
+  "repository": "https://github.com/jan-guenter/bluemap-ars-technica-addon",
+  "tag": "v0.1.0-alpha.1",
+  "maven_coordinate": "io.github.jan-guenter:bluemap-ars-technica-addon:0.1.0-alpha.1",
+  "owner_accepted_staging": {
+    "accepted_at": "2026-08-25",
+    "commit": "ee6f48ee167e6aaa25c79e22d7e0158bf933795c",
+    "production_jar_sha256": "224cf2260ceef69029929faed192a6058c8eb0310959d8c0630d77511ae57a97",
+    "production_jar_size": 139866,
+    "tree": "02feba8ec48ca15654765d82a2d62856d7d91c6a",
+    "visual_acceptance": true
+  },
+  "accepted_staging_entries": {
+    "entry_count": 40,
+    "path": "provenance/accepted-staging-entries.sha256",
+    "sha256": "da2cbc34fd95dcba174f135132bdf69d5f875faabb9a51476dee36ccb4a9ffb5"
+  },
+  "final_release_artifacts": {
+    "production_jar": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.1.jar",
+      "size": 139865,
+      "sha256": "4b36968ee1ed53614ba1de5d11277f073ed43c94c48470e53fbbca2679e8e643"
+    },
+    "sources_jar": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.1-sources.jar",
+      "size": 83764,
+      "sha256": "33a905f4f2d0482240874a1245ae1ba917c768747432a95713cff61e5f45e4db"
+    },
+    "pom": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.1.pom",
+      "size": 1347,
+      "sha256": "dc5304a9541054f0963aea021d468c082be44375829f6b23908aed43fd601705"
+    },
+    "gradle_module": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.1.module.json",
+      "size": 2854,
+      "sha256": "9a59fd709fb6d118c2f5a18bcf5b6706c06024674a46a97de80ea26e5587d393"
+    }
+  },
+  "staged_equivalence": {
+    "entry_manifest": "provenance/accepted-staging-entries.sha256",
+    "identical_non_manifest_entries": 40,
+    "whole_jar_byte_identical": false,
+    "only_changed_entry_bytes": "META-INF/MANIFEST.MF",
+    "change_reason": "Implementation-Version changed from the accepted SNAPSHOT marker to the final release version."
+  },
+  "gallery": {
+    "archive_file_name": "ars_technica-gallery-release.zip",
+    "size": 2443,
+    "sha256": "fb9796612f2ff0de1f3a777df6ffe6e966c99884a54fb18f46171f26ccae7703",
+    "source_motor_facings": 6,
+    "transmutation_turret_facings": 6,
+    "precise_relays": 1,
+    "stock_controls": 1,
+    "published_as_release_asset": false
+  },
+  "ephemeral_ci_inputs": {
+    "ars_technica": {
+      "curseforge_project": 1096161,
+      "curseforge_file": 7642730,
+      "size": 3691171,
+      "sha256": "64b70f39f8c8ca38262c69e2b84a6494a8a11c8ef7e570d8136b1818d5d3159d"
+    },
+    "ars_nouveau": {
+      "curseforge_project": 401955,
+      "curseforge_file": 8517890,
+      "size": 20096005,
+      "sha256": "90796df69bfb39b1a9c79edbfa01c2425e5b86aea47dc55ebdcbf30e88f47592"
+    },
+    "create": {
+      "curseforge_project": 328085,
+      "curseforge_file": 7963363,
+      "size": 19123767,
+      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
+    },
+    "policy": "Downloaded only into the ephemeral runner, verified before use, and never bundled or uploaded."
+  },
+  "verification": {
+    "production_jar_exact_byte_gate": true,
+    "sources_jar_exact_byte_gate": true,
+    "publication_metadata_exact_byte_gate": true,
+    "staged_equivalence_gate": true,
+    "exact_input_gate": true
+  }
 }
