@@ -11,6 +11,12 @@ static meshes compiled from the operator-installed GEO resources.
 
 ## Build
 
+Clone with `--recurse-submodules`, or initialize an existing checkout with
+`git submodule update --init --recursive -- tooling/bluemap-addon-toolkit`.
+The settings preflight accepts only the committed toolkit gitlink at commit
+`6cd34a8368cc4ee8628fbe830a90ec5b14960629` and rejects an uninitialized,
+changed, or dirty toolkit checkout.
+
 ```bash
 gradle --no-daemon -PbluemapSourcePath=../bluemap-backport clean check build
 ```
