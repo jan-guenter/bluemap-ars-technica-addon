@@ -12,10 +12,10 @@ import de.bluecolored.bluemap.core.util.Direction;
 import de.bluecolored.bluemap.core.util.Key;
 import de.bluecolored.bluemap.core.util.math.Color;
 import de.bluecolored.bluemap.core.world.block.BlockNeighborhood;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel.Quad;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel.Vec3;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel.Vertex;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel.Quad;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel.Vec3;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel.Vertex;
 
 /** Emits a deterministic static pose from exact installed GEO and texture resources. */
 final class InstalledGeoMeshEmitter {

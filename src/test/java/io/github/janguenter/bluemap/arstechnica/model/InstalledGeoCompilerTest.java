@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import io.github.janguenter.bluemap.arstechnica.profile.ArsTechnica276Profile;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoCompiler;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
@@ -25,17 +29,17 @@ class InstalledGeoCompilerTest {
     @Test
     void compilesBothExactInstalledMeshesDeterministically() throws IOException {
         InstalledGeoModel relay = InstalledGeoCompiler.compile(
-                exactEntry(RELAY), InstalledGeoCompiler.SOURCE_RELAY
+                exactEntry(RELAY), ArsTechnica276Profile.SOURCE_RELAY_GEO
         );
         byte[] turretBytes = exactEntry(TURRET);
         InstalledGeoModel turret = InstalledGeoCompiler.compile(
-                turretBytes, InstalledGeoCompiler.TRANSMUTATION_TURRET
+                turretBytes, ArsTechnica276Profile.TRANSMUTATION_TURRET_GEO
         );
 
         assertEquals(102, relay.quads().size());
         assertEquals(84, turret.quads().size());
         assertEquals(turret, InstalledGeoCompiler.compile(
-                turretBytes, InstalledGeoCompiler.TRANSMUTATION_TURRET
+                turretBytes, ArsTechnica276Profile.TRANSMUTATION_TURRET_GEO
         ));
         assertTrue(relay.quads().stream().flatMap(quad -> java.util.stream.Stream.of(
                 quad.first(), quad.second(), quad.third(), quad.fourth()
@@ -50,10 +54,10 @@ class InstalledGeoCompilerTest {
                 .getBytes(StandardCharsets.UTF_8);
 
         assertThrows(IllegalArgumentException.class, () -> InstalledGeoCompiler.compile(
-                changed, InstalledGeoCompiler.SOURCE_RELAY
+                changed, ArsTechnica276Profile.SOURCE_RELAY_GEO
         ));
         assertThrows(IllegalArgumentException.class, () -> InstalledGeoCompiler.compile(
-                exactEntry(RELAY), InstalledGeoCompiler.TRANSMUTATION_TURRET
+                exactEntry(RELAY), ArsTechnica276Profile.TRANSMUTATION_TURRET_GEO
         ));
     }
 

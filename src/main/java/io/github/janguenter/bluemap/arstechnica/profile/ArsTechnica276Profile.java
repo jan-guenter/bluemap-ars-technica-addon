@@ -4,6 +4,8 @@
 
 package io.github.janguenter.bluemap.arstechnica.profile;
 
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoCompiler;
+
 import java.util.List;
 
 /** Exact All the Mons 1.2.0 profile `ars-technica-2.7.6-mc1.21.1`. */
@@ -37,6 +39,10 @@ public final class ArsTechnica276Profile {
     public static final List<ArtifactPin> ARTIFACTS = List.of(
             ARS_TECHNICA, ARS_NOUVEAU, CREATE
     );
+    public static final InstalledGeoCompiler.Contract SOURCE_RELAY_GEO =
+            new InstalledGeoCompiler.Contract(9, 17, 102);
+    public static final InstalledGeoCompiler.Contract TRANSMUTATION_TURRET_GEO =
+            new InstalledGeoCompiler.Contract(5, 14, 84);
     public static final List<ResourcePin> RESOURCES = List.of(
             new ResourcePin(
                     ARS_TECHNICA,
