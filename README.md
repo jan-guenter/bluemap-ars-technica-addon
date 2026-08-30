@@ -3,19 +3,20 @@
 A Java 21 BlueMap add-on for the exact `ars-technica-2.7.6-mc1.21.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: released as `v0.1.0-alpha.1`. The exact artifact gate admits only Ars
-Technica 2.7.6, Ars Nouveau 5.13.0, and Create 6.0.10. It preserves the source
-motor's stock body while adding its static shaft, and replaces the empty
-animated placeholders for the precise relay and transmutation turret with
-static meshes compiled from the operator-installed GEO resources.
+Version `0.1.0-alpha.2` keeps the owner-accepted renderer while replacing its
+private installed-GEO compiler with the pinned shared source module. The exact
+artifact gate admits only Ars Technica 2.7.6, Ars Nouveau 5.13.0, and Create
+6.0.10. It preserves the source motor's stock body while adding its static
+shaft, and replaces the empty animated placeholders for the precise relay and
+transmutation turret with static meshes compiled from operator-installed GEO
+resources.
 
 ## Build
 
 Clone with `--recurse-submodules`, or initialize an existing checkout with
-`git submodule update --init --recursive -- tooling/bluemap-addon-toolkit`.
-The settings preflight accepts only the committed toolkit gitlink at commit
-`6cd34a8368cc4ee8628fbe830a90ec5b14960629` and rejects an uninitialized,
-changed, or dirty toolkit checkout.
+`git submodule update --init --recursive`. The settings preflight accepts only
+the committed toolkit and installed-GEO module gitlinks and rejects an
+uninitialized, changed, or dirty checkout.
 
 ```bash
 gradle --no-daemon -PbluemapSourcePath=../bluemap-backport clean check build
@@ -25,6 +26,12 @@ gradle --no-daemon -PbluemapSourcePath=../bluemap-backport clean check build
 requires every exact candidate JAR property and validates the 14-case gallery.
 See `provenance/upstreams.json` for immutable artifact identities and
 the [execution guide](docs/EXECUTION.md) for the prototype-to-release loop.
+
+The pinned `modules/bluemap-installed-geo-resource-models` source module
+supplies the neutral installed Bedrock GEO compiler and mesh records. Gradle
+compiles those sources into this add-on with a direct compile-only Gson 2.8.9
+pin. No shared module JAR is installed or nested. The settings preflight pins
+the `v0.1.0-alpha.1` commit and production-source tree.
 
 ## Install
 

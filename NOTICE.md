@@ -8,3 +8,8 @@ It compiles against the MIT-licensed BlueMap internal API at exact commit
 
 Candidate artifacts are runtime evidence only. Their binaries, source, classes,
 assets, and captured meshes are not redistributed.
+
+The add-on compiles the MIT-licensed installed-GEO model sources from the exact
+`bluemap-installed-geo-resource-models` gitlink. Those classes and sources are
+included directly in this add-on. The standalone module JAR is not bundled or
+installed separately; its identity is recorded in `THIRD_PARTY.md`.

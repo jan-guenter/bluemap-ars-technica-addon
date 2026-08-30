@@ -4,11 +4,13 @@ This repository starts inactive and stock-safe. Implement only the smallest
 observed Ars Technica rendering defect before staging.
 
 Before running Gradle gates, activate a Python 3.11 or newer virtual
-environment, initialize the pinned toolkit submodule, and install the exact
+environment, initialize both pinned source dependencies, and install the exact
 development-only toolkit into the environment:
 
 ```bash
-git submodule update --init --recursive -- tooling/bluemap-addon-toolkit
+git submodule update --init --recursive -- \
+  tooling/bluemap-addon-toolkit \
+  modules/bluemap-installed-geo-resource-models
 python -m pip install --disable-pip-version-check --no-deps \
   --require-hashes --only-binary=:all: \
   --requirement requirements/toolkit.txt
@@ -16,6 +18,10 @@ python -m pip install --disable-pip-version-check --no-deps \
 
 The requirement locks the 20,585-byte `v0.3.0-alpha.1` wheel at SHA-256
 `82f1ec53603646849a7c2d4b58f3fb7000413fe83043a302bee88cc88daeb8f7`.
+The installed-GEO gitlink pins `v0.1.0-alpha.1` commit
+`c80a83eb6e2cb0bb05a69ace9716ef08b9db14f2` and production-source tree
+`8db87f933557d54c5ede2db70d94f67eaf44c30b`. Gradle compiles those sources
+directly into the add-on; no standalone module JAR is installed or nested.
 
 ## Prototype
 

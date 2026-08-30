@@ -5,7 +5,7 @@ package io.github.janguenter.bluemap.arstechnica.adapter.bluemap522;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel.Vec3;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel.Vec3;
 import org.junit.jupiter.api.Test;
 
 class InstalledGeoMeshEmitterTest {

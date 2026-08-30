@@ -9,12 +9,12 @@ import de.bluecolored.bluemap.core.resources.pack.resourcepack.ResourcePackExten
 import de.bluecolored.bluemap.core.resources.pack.resourcepack.model.Model;
 import de.bluecolored.bluemap.core.util.Key;
 import io.github.janguenter.bluemap.arstechnica.activation.AddonRuntime;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoCompiler;
-import io.github.janguenter.bluemap.arstechnica.model.InstalledGeoModel;
 import io.github.janguenter.bluemap.arstechnica.profile.ArsTechnica276Profile;
 import io.github.janguenter.bluemap.arstechnica.profile.ArsTechnica276Profile.ResourcePin;
 import io.github.janguenter.bluemap.arstechnica.profile.ArtifactPin;
 import io.github.janguenter.bluemap.arstechnica.profile.ExactArtifactDetector;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoCompiler;
+import io.github.janguenter.bluemap.resource.installedgeo.model.InstalledGeoModel;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -89,11 +89,11 @@ final class ProfileResourceExtension implements ResourcePackExtension {
                 resources.put(pin.path(), readPinned(artifacts.get(pin.artifact()), pin));
             }
             relay = InstalledGeoCompiler.compile(
-                    resources.get(RELAY_GEO), InstalledGeoCompiler.SOURCE_RELAY
+                    resources.get(RELAY_GEO), ArsTechnica276Profile.SOURCE_RELAY_GEO
             );
             turret = InstalledGeoCompiler.compile(
                     resources.get(TURRET_GEO),
-                    InstalledGeoCompiler.TRANSMUTATION_TURRET
+                    ArsTechnica276Profile.TRANSMUTATION_TURRET_GEO
             );
         } catch (IOException | RuntimeException exception) {
             relay = null;

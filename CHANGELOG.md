@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.2 - 2026-08-30
+
+- Replaced the private installed-GEO compiler and mesh records with the pinned
+  `bluemap-installed-geo-resource-models` source module.
+- Kept Ars Technica's exact relay and turret contracts, resource admission,
+  renderer behavior, fallback signals, and frozen parity fixtures local.
+
 ## 0.1.0-alpha.1 - 2026-08-25
 
 - Added fail-closed exact-profile admission for Ars Technica 2.7.6, Ars Nouveau
