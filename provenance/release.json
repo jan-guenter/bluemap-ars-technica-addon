@@ -1,131 +1,117 @@
 {
   "schema_version": 1,
   "status": "owner-accepted-release-candidate",
-  "version": "0.1.0-alpha.2",
-  "release_date": "2026-08-30",
+  "version": "0.1.0-alpha.3",
+  "release_date": "2026-08-31",
   "repository": "https://github.com/jan-guenter/bluemap-ars-technica-addon",
-  "tag": "v0.1.0-alpha.2",
-  "maven_coordinate": "io.github.jan-guenter:bluemap-ars-technica-addon:0.1.0-alpha.2",
+  "tag": "v0.1.0-alpha.3",
+  "maven_coordinate": "io.github.jan-guenter:bluemap-ars-technica-addon:0.1.0-alpha.3",
   "owner_accepted_staging": {
-    "accepted_at": "2026-08-25",
-    "commit": "ee6f48ee167e6aaa25c79e22d7e0158bf933795c",
-    "production_jar_sha256": "224cf2260ceef69029929faed192a6058c8eb0310959d8c0630d77511ae57a97",
-    "production_jar_size": 139866,
-    "tree": "02feba8ec48ca15654765d82a2d62856d7d91c6a",
+    "accepted_at": "2026-08-31",
+    "commit": "f7e435646713d1b15ba77c0744be74fbf24a7696",
+    "production_jar_sha256": "d05a10f02557a425616dacf7ade89b1afed86ffef7aef1f0767d334d66fe1e46",
+    "production_jar_size": 156063,
+    "tree": "af77f2c7884edf4a094785576a0054be60e5d5e8",
     "visual_acceptance": true
   },
   "accepted_staging_entries": {
-    "entry_count": 42,
+    "entry_count": 43,
     "path": "provenance/accepted-staging-entries.sha256",
-    "sha256": "190ed567ec03a86964d9bac01b0ccc709fa433904923dbdd5d18119a5a5f63bb"
+    "sha256": "503adbe9bee074f3375f3ea412ceaaa6e4d389d8c0edbf8b3c4ddb264a25a53c"
+  },
+  "inherited_visual_acceptance": {
+    "baseline_version": "0.1.0-alpha.2",
+    "baseline_release_commit": "ce6ae6049522218a742acada1064e14ccf2c769e",
+    "baseline_release_tree": "ffe4098f21259a7caefe8d7432e067b2b2f6b79c",
+    "baseline_production_jar_size": 150969,
+    "baseline_production_jar_sha256": "445239a893ea9027e4b2a0562d47d64fb0bdd5e5bb8c80156b79ee22502498f0",
+    "baseline_gallery_archive_size": 2443,
+    "baseline_gallery_archive_sha256": "fb9796612f2ff0de1f3a777df6ffe6e966c99884a54fb18f46171f26ccae7703",
+    "original_visual_acceptance": true,
+    "scope": "The exact profile, source motor, precise relay, transmutation turret, 14-case gallery, installed-GEO compiler, installed-resource use and stock fallback are unchanged. Alpha.3 moves only the BlueMap adapter boundary and shared bootstrap helpers to their 5.23-only packages."
   },
   "final_release_artifacts": {
     "production_jar": {
-      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.2.jar",
-      "size": 150969,
-      "sha256": "445239a893ea9027e4b2a0562d47d64fb0bdd5e5bb8c80156b79ee22502498f0"
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.jar",
+      "size": 156063,
+      "sha256": "d05a10f02557a425616dacf7ade89b1afed86ffef7aef1f0767d334d66fe1e46"
     },
     "sources_jar": {
-      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.2-sources.jar",
-      "size": 87416,
-      "sha256": "f3ab618e1c2af2acd274e5b029350f507a9ee05a80898092e4755cdfb997f708"
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3-sources.jar",
+      "size": 92231,
+      "sha256": "746d8e66350349740df984688ffdf280c89ae43d66626f87e31478681e8bd631"
     },
     "pom": {
-      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.2.pom",
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.pom",
       "size": 1347,
-      "sha256": "5c794292b0f71c4a85085b88f9d8b4512e9f0c38a8f924de4c8913c14944fdd2"
+      "sha256": "544f37319a3c074f5397bec7a9b7d5caf6d577d6fdc62939dfebc57e9c5da54b"
     },
     "gradle_module": {
-      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.2.module.json",
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.module.json",
       "size": 2854,
-      "sha256": "3f5a8de3f1d69738025345734ae04160d2606441024b96f818590bfd4d60bcc3"
-    },
-    "sha256sums": {
-      "file_name": "SHA256SUMS",
-      "size": 460,
-      "sha256": "e5aaa4f5bfc98b4ffa1ac78a986515574a233f8e95ad312a79a3c7a299bcdd65"
+      "sha256": "309c382d15db5dc92fa772722f265ed95816ba715f33e0df5cb9f7fca1bd99e1"
     }
   },
   "staged_equivalence": {
     "entry_manifest": "provenance/accepted-staging-entries.sha256",
-    "identical_non_manifest_entries": 42,
+    "identical_non_manifest_entries": 43,
     "whole_jar_byte_identical": true,
     "only_changed_entry_bytes": "none",
-    "change_reason": "The sealed alpha.2 candidate is the reviewed source-module migration build; its legacy visual acceptance is carried forward by exact compiler parity, unchanged gallery sources, and unchanged renderer behavior."
+    "change_reason": "The production artifacts reproduce the owner-accepted BlueMap 5.23 integration candidate."
   },
-  "installed_geo_module_migration": {
-    "baseline_version": "0.1.0-alpha.1",
-    "baseline_release_commit": "76c8a262fc42f309f3ad8ba039c79d8fe0a42ae1",
-    "baseline_production_jar_size": 139865,
-    "baseline_production_jar_sha256": "4b36968ee1ed53614ba1de5d11277f073ed43c94c48470e53fbbca2679e8e643",
+  "exact_feature_backport_migration": {
+    "bluemap_version": "5.22-feature.backport-5.23-stateless-java-web-server-46",
+    "bluemap_commit": "7e07f4e74ec1e92a6ead9aa1e66054af3e133aac",
+    "bluemap_api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971",
+    "tested_neoforge_jar_size": 6545661,
+    "tested_neoforge_jar_sha256": "86a0323d24f472e425dda4d4e6bba2d7d8ce8315ad009930a67131128c715e62",
+    "local_adapter_package": "io.github.janguenter.bluemap.arstechnica.adapter.bluemap523",
+    "former_local_adapter_package_present": false,
+    "former_runtime_identity_accepted": false
+  },
+  "adapter_api_migration": {
+    "repository": "https://github.com/jan-guenter/bluemap-addon-adapter-api",
+    "version": "0.1.0-alpha.2",
+    "tag": "v0.1.0-alpha.2",
+    "release_target_commit": "e81f08bc4bfbf02d810ec8949a019130e2e61634",
+    "source_tree": "2f974c9bb2ba13888d69682f86f30f58922d30eb",
+    "bluemap_commit": "7e07f4e74ec1e92a6ead9aa1e66054af3e133aac",
+    "compiled_source_count": 4,
+    "replaced_local_helpers": [
+      "AdapterCompatibility",
+      "ProfileResourceExtensionType",
+      "RegistryGuard"
+    ],
+    "standalone_module_jar_bundled": false,
+    "standalone_module_jar_installed": false
+  },
+  "installed_geo_module": {
     "repository": "https://github.com/jan-guenter/bluemap-installed-geo-resource-models",
     "version": "0.1.0-alpha.1",
     "tag": "v0.1.0-alpha.1",
     "commit": "c80a83eb6e2cb0bb05a69ace9716ef08b9db14f2",
     "source_tree": "8db87f933557d54c5ede2db70d94f67eaf44c30b",
-    "production_archive": {
-      "old_entries": 41,
-      "new_entries": 43,
-      "unchanged_entries": 19,
-      "changed_common_entries": 10,
-      "removed_local_compiler_model_classes": 12,
-      "added_shared_compiler_model_pose_classes": 14
-    },
-    "sources_archive": {
-      "old_entries": 25,
-      "new_entries": 26,
-      "unchanged_entries": 17,
-      "changed_common_entries": 6,
-      "removed_local_compiler_model_sources": 2,
-      "added_shared_compiler_model_pose_sources": 3
-    },
-    "parity": {
-      "complete_ordered_mesh_bits_equal": true,
-      "synthetic_base_sha256": "0230e47798bf74f9b94055f2ddaf757ae21bd3ce52d30f714c5078e684bf38b6",
-      "complex_static_sha256": "4e654a1b2b7d9c910d5b21b69cc2b6dc26d94598481d042a6debd8348d69cf06",
-      "consumer_parity_fixtures_passed": 7,
-      "installed_resource_tests_passed": true
-    },
-    "gallery_sources_unchanged": true,
-    "resource_admission_unchanged": true,
     "renderer_behavior_change": false
   },
-  "gallery": {
-    "archive_file_name": "ars_technica-gallery-release.zip",
-    "size": 2443,
-    "sha256": "fb9796612f2ff0de1f3a777df6ffe6e966c99884a54fb18f46171f26ccae7703",
-    "source_motor_facings": 6,
-    "transmutation_turret_facings": 6,
-    "precise_relays": 1,
-    "stock_controls": 1,
-    "published_as_release_asset": false
-  },
-  "ephemeral_ci_inputs": {
-    "ars_technica": {
-      "curseforge_project": 1096161,
-      "curseforge_file": 7642730,
-      "size": 3691171,
-      "sha256": "64b70f39f8c8ca38262c69e2b84a6494a8a11c8ef7e570d8136b1818d5d3159d"
-    },
-    "ars_nouveau": {
-      "curseforge_project": 401955,
-      "curseforge_file": 8517890,
-      "size": 20096005,
-      "sha256": "90796df69bfb39b1a9c79edbfa01c2425e5b86aea47dc55ebdcbf30e88f47592"
-    },
-    "create": {
-      "curseforge_project": 328085,
-      "curseforge_file": 7963363,
-      "size": 19123767,
-      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
-    },
-    "policy": "Downloaded only into the ephemeral runner, verified before use, and never bundled or uploaded."
+  "preserved_contract": {
+    "routed_block_count": 3,
+    "legal_state_count": 32,
+    "gallery_fixture_count": 14,
+    "gallery_sources_changed": false,
+    "package_normalized_family_renderer_classes_bytecode_exact": 9,
+    "resource_extension_factory_contract_tested": true,
+    "runtime_profile_and_renderer_behavior_changed": false,
+    "consumer_tests_passed": 18
   },
   "verification": {
-    "production_jar_exact_byte_gate": true,
-    "sources_jar_exact_byte_gate": true,
-    "publication_metadata_exact_byte_gate": true,
-    "staged_equivalence_gate": true,
-    "exact_input_gate": true
+    "exact_input_gate": true,
+    "production_archive_boundary_gate": true,
+    "sources_archive_boundary_gate": true,
+    "adapter_api_migration_boundary_gate": true,
+    "exact_feature_backport_runtime_identity_gate": true,
+    "gradle_9_4_clean_builds": 2,
+    "gallery_lint": true,
+    "checkstyle": true,
+    "actionlint": true
   }
 }
