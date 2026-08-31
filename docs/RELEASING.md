@@ -4,13 +4,14 @@ Prototype work is intentionally light. Before owner acceptance, run only the
 focused Java checks, exact candidate verifier, gallery checks, and disposable
 staging comparison needed to get useful visual feedback.
 
-Initialize the pinned toolkit and installed-GEO source module before any
+Initialize the pinned toolkit, installed-GEO module, and Adapter API before any
 Gradle gate:
 
 ```bash
 git submodule update --init --recursive -- \
   tooling/bluemap-addon-toolkit \
-  modules/bluemap-installed-geo-resource-models
+  modules/bluemap-installed-geo-resource-models \
+  modules/bluemap-addon-adapter-api
 ```
 
 After the owner accepts the candidate:

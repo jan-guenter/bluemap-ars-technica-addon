@@ -1,31 +1,36 @@
 # BlueMap Ars Technica Add-on
 
-A Java 21 BlueMap add-on for the exact `ars-technica-2.7.6-mc1.21.1` profile in All the Mons
-`1.2.0` / Minecraft `1.21.1`.
+A Java 21 BlueMap 5.23 feature-backport add-on for the exact
+`ars-technica-2.7.6-mc1.21.1` profile in All the Mons `1.2.0` / Minecraft
+`1.21.1`.
 
-Version `0.1.0-alpha.2` keeps the owner-accepted renderer while replacing its
-private installed-GEO compiler with the pinned shared source module. The exact
-artifact gate admits only Ars Technica 2.7.6, Ars Nouveau 5.13.0, and Create
-6.0.10. It preserves the source motor's stock body while adding its static
-shaft, and replaces the empty animated placeholders for the precise relay and
-transmutation turret with static meshes compiled from operator-installed GEO
-resources.
+Status: unpublished `0.1.0-alpha.3` migration candidate. The owner accepted
+and released the same renderer in `0.1.0-alpha.2`. This candidate targets only
+BlueMap feature-backport commit
+`7e07f4e74ec1e92a6ead9aa1e66054af3e133aac` and API commit
+`285c9a60eff3ac2b0cab308ce1058d1565be0971`. The exact artifact gate still
+admits only Ars Technica 2.7.6, Ars Nouveau 5.13.0, and Create 6.0.10. The
+source motor, relay, turret, installed-resource compiler, and stock fallback
+remain unchanged.
 
 ## Build
 
 Clone with `--recurse-submodules`, or initialize an existing checkout with
 `git submodule update --init --recursive`. The settings preflight accepts only
-the committed toolkit and installed-GEO module gitlinks and rejects an
-uninitialized, changed, or dirty checkout.
+the committed toolkit, installed-GEO, and Adapter API gitlinks. It rejects an
+uninitialized, changed, dirty, incorrectly pinned, or source-tree-mismatched
+checkout.
 
 ```bash
 gradle --no-daemon -PbluemapSourcePath=../bluemap-backport clean check build
 ```
 
-`check` is the quick Java/checkstyle/archive gate. `prototypeCheck` additionally
+`check` is the Java, checkstyle, and archive gate. `prototypeCheck` also
 requires every exact candidate JAR property and validates the 14-case gallery.
-See `provenance/upstreams.json` for immutable artifact identities and
-the [execution guide](docs/EXECUTION.md) for the prototype-to-release loop.
+The production and sources JARs contain the four exact Adapter API sources,
+never the standalone module JAR. See `provenance/upstreams.json` for immutable
+artifact identities and the [execution guide](docs/EXECUTION.md) for the
+review and release loop.
 
 The pinned `modules/bluemap-installed-geo-resource-models` source module
 supplies the neutral installed Bedrock GEO compiler and mesh records. Gradle

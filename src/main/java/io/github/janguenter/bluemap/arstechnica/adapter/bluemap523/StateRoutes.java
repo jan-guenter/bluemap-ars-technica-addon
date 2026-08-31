@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 
-package io.github.janguenter.bluemap.arstechnica.adapter.bluemap522;
+package io.github.janguenter.bluemap.arstechnica.adapter.bluemap523;
 
 import java.util.Map;
 import java.util.Set;

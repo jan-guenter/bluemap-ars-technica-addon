@@ -4,13 +4,14 @@ This repository starts inactive and stock-safe. Implement only the smallest
 observed Ars Technica rendering defect before staging.
 
 Before running Gradle gates, activate a Python 3.11 or newer virtual
-environment, initialize both pinned source dependencies, and install the exact
+environment, initialize all pinned source dependencies, and install the exact
 development-only toolkit into the environment:
 
 ```bash
 git submodule update --init --recursive -- \
   tooling/bluemap-addon-toolkit \
-  modules/bluemap-installed-geo-resource-models
+  modules/bluemap-installed-geo-resource-models \
+  modules/bluemap-addon-adapter-api
 python -m pip install --disable-pip-version-check --no-deps \
   --require-hashes --only-binary=:all: \
   --requirement requirements/toolkit.txt
@@ -22,6 +23,10 @@ The installed-GEO gitlink pins `v0.1.0-alpha.1` commit
 `c80a83eb6e2cb0bb05a69ace9716ef08b9db14f2` and production-source tree
 `8db87f933557d54c5ede2db70d94f67eaf44c30b`. Gradle compiles those sources
 directly into the add-on; no standalone module JAR is installed or nested.
+The Adapter API gitlink pins `v0.1.0-alpha.2` commit
+`e81f08bc4bfbf02d810ec8949a019130e2e61634` and source tree
+`2f974c9bb2ba13888d69682f86f30f58922d30eb`. Gradle compiles its four source
+files directly into the add-on.
 
 ## Prototype
 
