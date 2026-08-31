@@ -18,7 +18,28 @@
     "original_visual_acceptance": true,
     "scope": "The exact profile, source motor, precise relay, transmutation turret, 14-case gallery, installed-GEO compiler, installed-resource use and stock fallback are unchanged. Alpha.3 moves only the BlueMap adapter boundary and shared bootstrap helpers to their 5.23-only packages."
   },
-  "candidate_artifacts": {},
+  "candidate_artifacts": {
+    "production_jar": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.jar",
+      "size": 156063,
+      "sha256": "d05a10f02557a425616dacf7ade89b1afed86ffef7aef1f0767d334d66fe1e46"
+    },
+    "sources_jar": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3-sources.jar",
+      "size": 92231,
+      "sha256": "746d8e66350349740df984688ffdf280c89ae43d66626f87e31478681e8bd631"
+    },
+    "pom": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.pom",
+      "size": 1347,
+      "sha256": "544f37319a3c074f5397bec7a9b7d5caf6d577d6fdc62939dfebc57e9c5da54b"
+    },
+    "gradle_module": {
+      "file_name": "bluemap-ars-technica-addon-0.1.0-alpha.3.module.json",
+      "size": 2854,
+      "sha256": "708ad7eb3dc6bc6f1bc00c5f3a3b8b4f181e823f21b702654d8ea259cbe32bba"
+    }
+  },
   "exact_feature_backport_migration": {
     "bluemap_version": "5.22-feature.backport-5.23-stateless-java-web-server-46",
     "bluemap_commit": "7e07f4e74ec1e92a6ead9aa1e66054af3e133aac",
@@ -58,15 +79,20 @@
     "legal_state_count": 32,
     "gallery_fixture_count": 14,
     "gallery_sources_changed": false,
-    "runtime_profile_and_renderer_behavior_changed": false
+    "package_normalized_family_renderer_classes_bytecode_exact": 9,
+    "resource_extension_factory_contract_tested": true,
+    "runtime_profile_and_renderer_behavior_changed": false,
+    "consumer_tests_passed": 18
   },
   "verification": {
-    "exact_input_gate": false,
-    "production_archive_boundary_gate": false,
-    "sources_archive_boundary_gate": false,
-    "adapter_api_migration_boundary_gate": false,
-    "exact_feature_backport_runtime_identity_gate": false,
-    "gallery_lint": false,
-    "checkstyle": false
+    "exact_input_gate": true,
+    "production_archive_boundary_gate": true,
+    "sources_archive_boundary_gate": true,
+    "adapter_api_migration_boundary_gate": true,
+    "exact_feature_backport_runtime_identity_gate": true,
+    "gradle_9_4_clean_builds": 2,
+    "gallery_lint": true,
+    "checkstyle": true,
+    "actionlint": true
   }
 }
