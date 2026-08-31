@@ -4,8 +4,8 @@ A Java 21 BlueMap 5.23 feature-backport add-on for the exact
 `ars-technica-2.7.6-mc1.21.1` profile in All the Mons `1.2.0` / Minecraft
 `1.21.1`.
 
-Status: unpublished `0.1.0-alpha.3` migration candidate. The owner accepted
-and released the same renderer in `0.1.0-alpha.2`. This candidate targets only
+Version `0.1.0-alpha.3` keeps the renderer accepted and released in
+`0.1.0-alpha.2`. It targets only
 BlueMap feature-backport commit
 `7e07f4e74ec1e92a6ead9aa1e66054af3e133aac` and API commit
 `285c9a60eff3ac2b0cab308ce1058d1565be0971`. The exact artifact gate still
